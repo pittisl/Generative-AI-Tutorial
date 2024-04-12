@@ -97,16 +97,14 @@ LLMs are transformers. They can be categorized into encoder-only, encoder-decode
 ![LLM Evolutionary Tree](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg)
 
 ### Pretraining and Finetuning
-LLMs are typically pretrained from trillions of text tokens by model publishers to internalize the natural language structure. Today's model developers also conduct instructional fine-tuning and Reinforcement Learning from Human Feedback (RLHF) to teach the model to follow human instructions and generate answers aligned with human preference.
-
-The users can then download the published model and finetune it on small personal datasets (e.g., movie dialog). Due to huge amount of data, pretraining requires massive computing resources (e.g., more than thousands of GPUs) which is unaffordable by individuals. On the other hand, fine-tuning is less resource-hungry and can be done with a few GPUs. 
+LLMs are typically pretrained from trillions of text tokens by model publishers to internalize the natural language structure. Today's model developers also conduct instructional fine-tuning and Reinforcement Learning from Human Feedback (RLHF) to teach the model to follow human instructions and generate answers aligned with human preference. The users can then download the published model and finetune it on small personal datasets (e.g., movie dialog). Due to huge amount of data, pretraining requires massive computing resources (e.g., more than thousands of GPUs) which is unaffordable by individuals. On the other hand, fine-tuning is less resource-hungry and can be done with a few GPUs. 
 
 The following materials can help you understand the pretraining and fine-tuning process:
 
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805) [Pretraining and Finetuning of Encoder-only LLMs]
 - [Scaling Instruction-Finetuned Language Models](https://arxiv.org/pdf/2210.11416) [Pretraining and Instructional Finetuning]
 - [Illustrating Reinforcement Learning from Human Feedback (RLHF)](https://huggingface.co/blog/rlhf)
-- [Language Models are Few-Shot Learners](https://arxiv.org/pdf/2005.14165) [Decoder-only LLMs] [[中文导读 by 李沐]](https://www.bilibili.com/video/BV1AF411b7xQ/?spm_id_from=333.999.0.0)
+- [Language Models are Few-Shot Learners](https://arxiv.org/pdf/2005.14165) [Decoder-only LLMs] [[中文导读 by 李沐]](https://www.bilibili.com/video/BV1AF411b7xQ)
 
 More tutorials can be found [here](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#tutorials).
 
