@@ -84,10 +84,14 @@ Transformer is the base architecture of existing large generative models. It's n
 * Why is RoPE better than sinusoidal positional encoding in the original transformer paper?
 
 ### Common Transformer-based Models
-* [Learning transferable visual models from natural language supervision](http://proceedings.mlr.press/v139/radford21a/radford21a.pdf) [CLIP Model]
-* [Emerging Properties in Self-Supervised Vision Transformers (ICCV 2021)](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf) [DINO Mode]
+* [Learning transferable visual models from natural language supervision](http://proceedings.mlr.press/v139/radford21a/radford21a.pdf) [CLIP]
+* [Emerging Properties in Self-Supervised Vision Transformers (ICCV 2021)](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf) [DINO]
 * [Masked autoencoders are scalable vision learners (CVPR 2022)](https://openaccess.thecvf.com/content/CVPR2022/papers/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.pdf) [MAE]
 * [Scaling Vision with Sparse Mixture of Experts (NeurIPS 2021)](https://arxiv.org/pdf/2106.05974.pdf) [MoE]
+* [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](https://arxiv.org/pdf/2404.02258) [MoD]
 
 ## Large Language Models (LLMs)
+LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Encoder-only model can be used to extract sentence features but lacks generative power. Encoder-decoder and decoder-only models are used for text generation. In particular, most existing LLMs prefer decoder-only structures due to stronger repesentational power. Intuitively, encoder-decoder models can be considered a sparse version of decoder-only models and the information decays more from encoder to decoder. Check this [paper](https://arxiv.org/pdf/2304.04052.pdf) for more details.
+
+
 ![LLM Evolutionary Tree](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg)
