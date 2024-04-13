@@ -3,8 +3,6 @@
 
 Generative AI is a hot topic today :fire: and this roadmap is designed to help beginners quickly gain basic knowledge and skills of Generative AI. Even experts are welcome to refer to this roadmap as a checklist to develop new ideas.
 
-:bulb: Tips: A good habit of learning is to ask yourself questions.
-
 ## Contents
 - [Background Knowledge](#background-knowledge)
   - [Neural Networks Inference and Training](#neural-networks-inference-and-training)
@@ -13,12 +11,12 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
 
 - [Large Language Models (LLMs)](#large-language-models-llms)
   - [Pretraining and Fine-tuning](#pretraining-and-finetuning)
-  - Prompting
-  - Evaluation
-  - Dealing with Long Context
-  - Efficient Fine-tuning
-  - Efficient Generation
-  - Open Challenges
+  - [Prompting](#prompting)
+  - [Evaluation](#evaluation)
+  - [Dealing with Long Context](#dealing-with-long-context)
+  - [Efficient Fine-tuning](#efficient-finetuning)
+  - [Efficient Generation](#efficient-generation)
+  - [Open Challenges](#open-challenges)
 
 - Diffusion Models
   - Image Generation
@@ -91,10 +89,11 @@ Transformer is the base architecture of existing large generative models. It's n
 - [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](https://arxiv.org/pdf/2404.02258) [MoD]
 
 ## Large Language Models (LLMs)
-LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Encoder-only model can be used to extract sentence features but lacks generative power. Encoder-decoder and decoder-only models are used for text generation. In particular, most existing LLMs prefer decoder-only structures due to stronger repesentational power. Intuitively, encoder-decoder models can be considered a sparse version of decoder-only models and the information decays more from encoder to decoder. Check this [paper](https://arxiv.org/pdf/2304.04052.pdf) for more details.
-
+LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Check [milstone papers](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#milestone-papers) of LLMs.
 
 ![LLM Evolutionary Tree](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg)
+
+Encoder-only model can be used to extract sentence features but lacks generative power. Encoder-decoder and decoder-only models are used for text generation. In particular, most existing LLMs prefer decoder-only structures due to stronger repesentational power. Intuitively, encoder-decoder models can be considered a sparse version of decoder-only models and the information decays more from encoder to decoder. Check this [paper](https://arxiv.org/pdf/2304.04052.pdf) for more details.
 
 ### Pretraining and Finetuning
 LLMs are typically pretrained from trillions of text tokens by model publishers to internalize the natural language structure. Today's model developers also conduct instructional fine-tuning and Reinforcement Learning from Human Feedback (RLHF) to teach the model to follow human instructions and generate answers aligned with human preference. The users can then download the published model and finetune it on small personal datasets (e.g., movie dialog). Due to huge amount of data, pretraining requires massive computing resources (e.g., more than thousands of GPUs) which is unaffordable by individuals. On the other hand, fine-tuning is less resource-hungry and can be done with a few GPUs. 
@@ -109,6 +108,116 @@ The following materials can help you understand the pretraining and fine-tuning 
 More tutorials can be found [here](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#tutorials).
 
 ### Prompting
+Prompting techniques for LLMs involve crafting input text in a way that guides the model to generate desired responses or outputs. Here are the useful resources to help you write better prompts:
+- [[DAIR.AI] Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) - A collection of prompt examples to be used with the ChatGPT model
+- [Awesome Deliberative Prompting](https://github.com/logikon-ai/awesome-deliberative-prompting) - How to ask LLMs to produce reliable reasoning and make reason-responsive decisions
+- [AutoPrompt](https://github.com/ucinlp/autoprompt) - An automated method based on gradient-guided search to create prompts for a diverse set of NLP tasks.
+
+### Evaluation
+Evaluation tools for large language models help assess their performance, capabilities, and limitations across different tasks and datasets. Here are some common evaluation strategies:
+- **Automatic Evaluation Metrics**: These metrics assess model performance automatically without human intervention. Common metrics include:
+
+  - [BLEU](https://huggingface.co/spaces/evaluate-metric/bleu): Measures the similarity between generated text and reference text based on n-gram overlap.
+  - [ROUGE](https://huggingface.co/spaces/evaluate-metric/rouge): Evaluates text summarization by comparing overlapping n-grams between generated and reference summaries.
+  - [Perplexity](https://huggingface.co/docs/transformers/en/perplexity): Measures how well a language model predicts a sample of text. Lower perplexity indicates better performance. It is equivalent to the exponentiation of the cross-entropy between the data and model predictions.
+  - [F1 Score](https://huggingface.co/spaces/evaluate-metric/f1): Measures the balance between precision and recall in tasks like text classification or named entity recognition.
+
+- **Human Evaluation**: Human judgment is essential for assessing the quality of generated text comprehensively. Common human evaluation methods include:
+
+  - **Human Ratings**: Human annotators rate generated text based on criteria such as fluency, coherence, relevance, and grammaticality.
+  - **Crowdsourcing Platforms**: Platforms like Amazon Mechanical Turk or Figure Eight facilitate large-scale human evaluation by crowdsourcing annotations.
+  - **Expert Evaluation**: Domain experts assess model outputs to gauge their suitability for specific applications or tasks.
+
+- **Benchmark Datasets**: Standardized datasets enable fair comparison of models across different tasks and domains. Examples include:
+
+  - [TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension](https://github.com/mandarjoshi90/triviaqa)
+  - [HellaSwag: Can a Machine Really Finish Your Sentence?](https://aclanthology.org/P19-1472.pdf)
+  - [GSM8K: Training Verifiers to Solve Math Word Problems](https://github.com/openai/grade-school-math)
+  - A complete list can be found [here](https://github.com/SihyeongPark/Awesome-LLM-Benchmark?tab=readme-ov-file#llm-datasetsbenchmarks-list)
+
+- Model Analysis Tools: Tools for analyzing model behavior and performance include:
+
+  - [Automated Interpretability](https://github.com/openai/automated-interpretability) - Code for automatically generating, simulating, and scoring explanations of neuron behavior
+  - [LLM Visualization](https://bbycroft.net/llm) - Visualizing LLMs in low level.
+  - [Attention Analysis](https://github.com/clarkkev/attention-analysis) - Analyzing attention maps from BERT transformer.
+  - [Neuron Viewer](https://openaipublic.blob.core.windows.net/neuron-explainer/neuron-viewer/index.html) - Tool for viewing neuron activations and explanations.
+
+A complete list can be found [here](https://github.com/JShollaj/awesome-llm-interpretability?tab=readme-ov-file#llm-interpretability-tools)
+
+Standard evaluation tools for existing LLMs include:
+- [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) - A framework for few-shot evaluation of language models.
+- [lighteval](https://github.com/huggingface/lighteval) - a lightweight LLM evaluation suite that Hugging Face has been using internally.
+- [OLMO-eval](https://github.com/allenai/OLMo-Eval) - a repository for evaluating open language models.
+- [instruct-eval](https://github.com/declare-lab/instruct-eval) - This repository contains code to quantitatively evaluate instruction-tuned models such as Alpaca and Flan-T5 on held-out tasks.
+
+
+### Dealing with Long Context
+
+Dealing with long contexts poses a challenge for large language models due to limitations in memory and processing capacity. Existing techniques include:
+- Efficient Transformers
+  - [Longformer: The Long-Document Transformer](https://arxiv.org/abs/2004.05150)
+  - [Reformer: The efficient transformer (ICLR 2020)](https://arxiv.org/abs/2001.04451)
+- State Space Models
+  - [Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention (ICML 2020)](https://arxiv.org/abs/2006.16236)
+  - [Rethinking attention with performers](https://arxiv.org/abs/2009.14794)
+- Length Extrapolation
+  - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752)
+  - [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
+  - [YaRN: Efficient Context Window Extension of Large Language Models](https://arxiv.org/abs/2309.00071)
+- Long Term Memory
+  - [MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)
+  - [Unleashing Infinite-Length Input Capacity for Large-scale Language Models with Self-Controlled Memory System](https://arxiv.org/abs/2304.13343)
+
+A complete list can be found [here](https://github.com/Xnhyacinth/Awesome-LLM-Long-Context-Modeling?tab=readme-ov-file#-papers)
+
+
+### Efficient Finetuning
+
+Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of large pretrained models to various downstream applications by only fine-tuning a small number of (extra) model parameters instead of all the model's parameters:
+  - Prompt Tuning: [The power of scale for parameter-efficient prompt tuning](https://arxiv.org/pdf/2104.08691.pdf?trk=public_post_comment-text)
+  - Prefix Tuning: [Prefix-tuning: Optimizing continuous prompts for generation](https://arxiv.org/pdf/2101.00190.pdf%EF%BC%89)
+  - LoRA: [Lora: Low-rank adaptation of large language models](https://arxiv.org/pdf/2106.09685)
+  - [Towards a Unified View of Parameter-Efficient Transfer Learning](https://arxiv.org/pdf/2110.04366)
+
+More work can be found in [Huggingface PEFT paper collection](https://huggingface.co/collections/PEFT/peft-papers-6573a1a95da75f987fb873ad) and it's highly recommended to practice with [HuggingFace PEFT API](https://github.com/huggingface/peft).
+
+### Efficient Generation
+Accelerating decoding of large language models is crucial for improving inference speed and efficiency, especially in real-time or latency-sensitive applications. Here are some representative work of speeding up decoding process of LLMs:
+
+- [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time (ICML 2023 Oral)](https://openreview.net/forum?id=wIPIhHd00i)
+- [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models (EMNLP 2023)](https://arxiv.org/abs/2310.05736)
+- [Efficient Streaming Language Models with Attention Sinks](https://arxiv.org/abs/2309.17453)
+- [SpecInfer: Accelerating Generative LLM Serving with Speculative Inference and Token Tree Verification](https://arxiv.org/abs/2305.09781)
+- [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](https://arxiv.org/abs/2401.10774)
+
+More work about accelerating LLM decoding can be found via [Link 1](https://github.com/horseee/Awesome-Efficient-LLM?tab=readme-ov-file#inference-acceleration) and [Link 2](https://github.com/DefTruth/Awesome-LLM-Inference).
+
+### Open Challenges
+Large language models face several open challenges that researchers and developers are actively working to address. These challenges include:
+- Hallucination
+  - [A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models](https://arxiv.org/pdf/2401.01313.pdf)
+- Model Compression
+  - [A Comprehensive Survey of Compression Algorithms for Language Models](https://arxiv.org/pdf/2401.15347.pdf)
+- Evaluation
+  - [Evaluating Large Language Models: A Comprehensive Survey](https://arxiv.org/pdf/2310.19736.pdf)
+- Reasoning
+  - [A Survey of Reasoning with Foundation Models](https://arxiv.org/pdf/2312.11562.pdf)
+- Explainability
+  - [From Understanding to Utilization: A Survey on Explainability for Large Language Models](https://arxiv.org/pdf/2401.12874.pdf)
+- Fairness
+  - [A Survey on Fairness in Large Language Models](https://arxiv.org/abs/2308.10149)
+- Factuality
+  - [A Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity](https://arxiv.org/abs/2310.07521)
+- Knowledge Integration
+  - [Trends in Integration of Knowledge and Large Language Models: A Survey and Taxonomy of Methods, Benchmarks, and Applications](https://arxiv.org/pdf/2311.05876.pdf)
+
+A complete list can be found [here](https://github.com/HqWu-HITCS/Awesome-LLM-Survey?tab=readme-ov-file#challenge-of-llm).
+
+
+
+
+
 
 
 
