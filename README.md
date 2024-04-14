@@ -18,7 +18,7 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Efficient Generation](#efficient-generation)
   - [Open Challenges](#open-challenges)
 
-- Diffusion Models
+- [Diffusion Models](#diffusion-models)
   - Image Generation
   - Video Generation
   - Audio Generation
@@ -213,6 +213,21 @@ Large language models face several open challenges that researchers and develope
   - [Trends in Integration of Knowledge and Large Language Models: A Survey and Taxonomy of Methods, Benchmarks, and Applications](https://arxiv.org/pdf/2311.05876.pdf)
 
 A complete list can be found [here](https://github.com/HqWu-HITCS/Awesome-LLM-Survey?tab=readme-ov-file#challenge-of-llm).
+
+## Diffusion Models
+Diffusion models aim to approxmiate the probability distribution of a given data domain, and provide a way to generate samples from its approxmated distribution. Their goals are similar to other popular generative models, such as [VAE](https://arxiv.org/pdf/1606.05908), [GANs](https://arxiv.org/pdf/1406.2661), and [Normalizing Flows](https://arxiv.org/pdf/1908.09257).
+
+The working flow of diffusion models is featured with two process:
+1. **Forward process (diffusion process):** it progressively applies noise to the original input data step by step until the data completely becomes noise.
+2. **Reverse process (denoising process):** an NN model is trained to estimate the noise being applied in each step during the forward process. This trained NN model can then be used to generate data from noise input. Existing diffusion models can also accept other signals (e.g., text prompts from users) to condition the data generation.
+
+Check [this awesome blog](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) and more introductory tutorials can be found [here](https://github.com/diff-usion/Awesome-Diffusion-Models#introductory-posts). Diffusion models can be used to generate images, audios, videos, and more, and there are many subfields related to diffusion models as shown below [[image source]](https://arxiv.org/abs/2209.00796):
+
+![Diffusion Model Taxonomy](https://user-images.githubusercontent.com/62683396/227244860-3608bf02-b2af-4c00-8e87-6221a59a4c42.png)
+
+### Image Generation
+
+
 
 
 
