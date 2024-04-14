@@ -1,7 +1,7 @@
 # Generative AI Roadmap
 > A subjective learning guide for generative AI research including curated list of articles and projects
 
-Generative AI is a hot topic today :fire: and this roadmap is designed to help beginners quickly gain basic knowledge and skills of Generative AI. Even experts are welcome to refer to this roadmap as a checklist to develop new ideas.
+Generative AI is a hot topic today :fire: and this roadmap is designed to help beginners quickly gain basic knowledge and find useful resources of Generative AI. Even experts are welcome to refer to this roadmap to recall old knowledge and develop new ideas.
 
 ## Contents
 - [Background Knowledge](#background-knowledge)
@@ -16,29 +16,27 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Dealing with Long Context](#dealing-with-long-context)
   - [Efficient Fine-tuning](#efficient-finetuning)
   - [Efficient Generation](#efficient-generation)
+  - [Knowledge Editing](#knowledge-editing)
   - [Open Challenges](#open-challenges)
 
 - [Diffusion Models](#diffusion-models)
-  - Image Generation
-  - Video Generation
-  - Audio Generation
-  - Pretraining and Fine-tuning
-  - Evaluation
-  - Efficient Generation
-  - Open Challenges
+  - [Image Generation](#image-generation)
+  - [Video Generation](#video-generation)
+  - [Audio Generation](#audio-generation)
+  - [Pretraining and Fine-tuning](#pretraining-and-finetuning-1)
+  - [Evaluation](#evaluation-1)
+  - [Efficient Generation](#efficient-generation-1)
+  - [Knowledge Editing](#knowledge-editing-1)
+  - [Open Challenges](#open-challenges-1)
 
-- Large Multimodal Models
-  - Model Architecture
-  - Towards Embodied Agents
-  - Open Challenges
+- [Large Multimodal Models (LMMs)](#large-multimodal-models-lmms)
+  - [Model Architectures](#model-architectures)
+  - [Towards Embodied Agents](#towards-embodied-agents)
+  - [Open Challenges](#open-challenges-2)
 
-- New Model Architectures
-  - Hyena
-  - RWKV
-  - RetNet
-  - Mamba
-
-- Explainability
+- [Beyond Transformers](#beyond-transformers)
+  - [Implicitly Structured Parameters](#implictly-structured-parameters)
+  - [New Model Architectures](#new-model-architectures)
 
 ## Background Knowledge
 This section should help you learn or regain the basic knowledge of neural networks (e.g., backpropagation), get you familiar with the transformer architecture, and describe some common transformer-based models.
@@ -91,7 +89,7 @@ Transformer is the base architecture of existing large generative models. It's n
 ## Large Language Models (LLMs)
 LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Check [milstone papers](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#milestone-papers) of LLMs.
 
-![LLM Evolutionary Tree](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg)
+![LLM Evolutionary Tree](https://github.com/Mooler0410/LLMsPracticalGuide/raw/main/imgs/tree.jpg)
 
 Encoder-only model can be used to extract sentence features but lacks generative power. Encoder-decoder and decoder-only models are used for text generation. In particular, most existing LLMs prefer decoder-only structures due to stronger repesentational power. Intuitively, encoder-decoder models can be considered a sparse version of decoder-only models and the information decays more from encoder to decoder. Check this [paper](https://arxiv.org/pdf/2304.04052.pdf) for more details.
 
@@ -145,7 +143,7 @@ Evaluation tools for large language models help assess their performance, capabi
 
 A complete list can be found [here](https://github.com/JShollaj/awesome-llm-interpretability?tab=readme-ov-file#llm-interpretability-tools)
 
-Standard evaluation tools for existing LLMs include:
+Standard evaluation frameworks for existing LLMs include:
 - [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) - A framework for few-shot evaluation of language models.
 - [lighteval](https://github.com/huggingface/lighteval) - a lightweight LLM evaluation suite that Hugging Face has been using internally.
 - [OLMO-eval](https://github.com/allenai/OLMo-Eval) - a repository for evaluating open language models.
@@ -183,7 +181,7 @@ Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of la
 More work can be found in [Huggingface PEFT paper collection](https://huggingface.co/collections/PEFT/peft-papers-6573a1a95da75f987fb873ad) and it's highly recommended to practice with [HuggingFace PEFT API](https://github.com/huggingface/peft).
 
 ### Efficient Generation
-Accelerating decoding of large language models is crucial for improving inference speed and efficiency, especially in real-time or latency-sensitive applications. Here are some representative work of speeding up decoding process of LLMs:
+Accelerating decoding of LLMs is crucial for improving inference speed and efficiency, especially in real-time or latency-sensitive applications. Here are some representative work of speeding up decoding process of LLMs:
 
 - [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time (ICML 2023 Oral)](https://openreview.net/forum?id=wIPIhHd00i)
 - [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models (EMNLP 2023)](https://arxiv.org/abs/2310.05736)
@@ -193,8 +191,20 @@ Accelerating decoding of large language models is crucial for improving inferenc
 
 More work about accelerating LLM decoding can be found via [Link 1](https://github.com/horseee/Awesome-Efficient-LLM?tab=readme-ov-file#inference-acceleration) and [Link 2](https://github.com/DefTruth/Awesome-LLM-Inference).
 
+### Knowledge Editing
+Knowledge editing aims to efficiently modify LLMs behaviors, such as reducing bias and revising learned correlations. It includes many topics such knowledge localization and unlearning. Representative work includes:
+- [Memory-Based Model Editing at Scale (ICML 2022)](https://arxiv.org/abs/2206.06520)
+- [Transformer-Patcher: One Mistake worth One Neuron (ICLR 2023)](https://arxiv.org/abs/2301.09785)
+- [Massive Editing for Large Language Model via Meta Learning (ICLR 2024)](https://arxiv.org/pdf/2311.04661.pdf)
+- [A Unified Framework for Model Editing](https://arxiv.org/abs/2403.14236)
+- [Transformer Feed-Forward Layers Are Key-Value Memories (EMNLP 2021)](https://arxiv.org/abs/2012.14913)
+- [Mass-Editing Memory in a Transformer](https://arxiv.org/abs/2210.07229)
+
+More papers can be found [here](https://github.com/zjunlp/KnowledgeEditingPapers).
+
+
 ### Open Challenges
-Large language models face several open challenges that researchers and developers are actively working to address. These challenges include:
+LLMs face several open challenges that researchers and developers are actively working to address. These challenges include:
 - Hallucination
   - [A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models](https://arxiv.org/pdf/2401.01313.pdf)
 - Model Compression
@@ -219,13 +229,144 @@ Diffusion models aim to approxmiate the probability distribution of a given data
 
 The working flow of diffusion models is featured with two process:
 1. **Forward process (diffusion process):** it progressively applies noise to the original input data step by step until the data completely becomes noise.
-2. **Reverse process (denoising process):** an NN model is trained to estimate the noise being applied in each step during the forward process. This trained NN model can then be used to generate data from noise input. Existing diffusion models can also accept other signals (e.g., text prompts from users) to condition the data generation.
+2. **Reverse process (denoising process):** an NN model (e.g., CNN or tranformer) is trained to estimate the noise being applied in each step during the forward process. This trained NN model can then be used to generate data from noise input. Existing diffusion models can also accept other signals (e.g., text prompts from users) to condition the data generation.
 
-Check [this awesome blog](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) and more introductory tutorials can be found [here](https://github.com/diff-usion/Awesome-Diffusion-Models#introductory-posts). Diffusion models can be used to generate images, audios, videos, and more, and there are many subfields related to diffusion models as shown below [[image source]](https://arxiv.org/abs/2209.00796):
+Check [this awesome blog](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) and more introductory tutorials can be found [here](https://github.com/diff-usion/Awesome-Diffusion-Models#introductory-posts). Diffusion models can be used to generate images, audios, videos, and more, and there are many subfields related to diffusion models as shown below [[image source]](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy):
 
 ![Diffusion Model Taxonomy](https://user-images.githubusercontent.com/62683396/227244860-3608bf02-b2af-4c00-8e87-6221a59a4c42.png)
 
 ### Image Generation
+Here are some representative papers of diffusion models for image generation:
+- [High-Resolution Image Synthesis with Latent Diffusion Models (CVPR 2022)](https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html)
+- [Palette: Image-to-image diffusion models (SIGGRAPH 2022)](https://arxiv.org/pdf/2111.05826)
+- [Image Super-Resolution via Iterative Refinement](https://arxiv.org/pdf/2104.07636)
+- [Inpainting using Denoising Diffusion Probabilistic Models (CVPR 2022)](https://openaccess.thecvf.com/content/CVPR2022/html/Lugmayr_RePaint_Inpainting_Using_Denoising_Diffusion_Probabilistic_Models_CVPR_2022_paper.html)
+- [Adding Conditional Control to Text-to-Image Diffusion Models (ICCV 2023)](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.pdf)
+
+More papers can be found [here](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy/tree/main?tab=readme-ov-file#1-computer-vision).
+
+### Video Generation
+Here are some representative papers of diffusion models for video generation:
+- [Video Diffusion Models](https://arxiv.org/pdf/2204.03458)
+- [Flexible Diffusion Modeling of Long Videos (NeurIPS 2022)](https://arxiv.org/pdf/2205.11495)
+- [Scaling Latent Video Diffusion Models to Large Datasets](https://arxiv.org/pdf/2311.15127)
+- [I2VGen-XL: High-Quality Image-to-Video Synthesis via Cascaded Diffusion Models](https://arxiv.org/pdf/2311.04145.pdf)
+
+More papers can be found [here](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#video-generation).
+
+### Audio Generation
+Here are some representative papers of diffusion models for audio generation:
+- [Grad-TTS: A Diffusion Probabilistic Model for Text-to-Speech](https://proceedings.mlr.press/v139/popov21a.html)
+- [Text-to-Audio Generation using Instruction-Tuned LLM and Latent Diffusion Model](https://arxiv.org/pdf/2304.13731v1.pdf)
+- [Zero-Shot Voice Conditioning for Denoising Diffusion TTS Models](https://arxiv.org/abs/2206.02246)
+- [EdiTTS: Score-based Editing for Controllable Text-to-Speech](https://arxiv.org/abs/2110.02584)
+- [ProDiff: Progressive Fast Diffusion Model For High-Quality Text-to-Speech](https://arxiv.org/abs/2207.06389)
+
+More papers can be found [here](https://diff-usion.github.io/Awesome-Diffusion-Models/#text-to-speech).
+
+### Pretraining and Finetuning
+Similar to other large generative models, diffusion models are also pretrained on large amount of web data (e.g., [LAION-5B dataset](https://proceedings.neurips.cc/paper_files/paper/2022/file/a1859debfb3b59d094f3504d5ebb6c25-Paper-Datasets_and_Benchmarks.pdf)) and consume massive computing resources. Users can download the released weights can further fine-tune the model on personal datasets.
+
+Here are some representative papers of efficient fine-tuning of diffusion models:
+- [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation (CVPR 2023)](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)
+- [An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion (ICLR 2023)](https://openreview.net/forum?id=NAQvF08TcyG)
+- [Custom Diffusion: Multi-Concept Customization of Text-to-Image Diffusion (cvpr 2023)](https://openaccess.thecvf.com/content/CVPR2023/html/Kumari_Multi-Concept_Customization_of_Text-to-Image_Diffusion_CVPR_2023_paper.html)
+- [Controlling Text-to-Image Diffusion by Orthogonal Finetuning (NeurIPS 2023)](https://nips.cc/virtual/2023/poster/72033)
+
+More papers can be found [here](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#new-concept-learning).
+
+It's highly recommended to do some practice with [Huggingface Diffusers API](https://github.com/huggingface/diffusers/tree/main/examples/text_to_image).
+
+### Evaluation
+Here we talk about evaluation of diffusion models for image generation. Many existing image quality metrics can be applied.
+- [CLIP score](https://arxiv.org/abs/2104.08718): CLIP score measures the compatibility of image-caption pairs. Higher CLIP scores imply higher compatibility. CLIP score was found to have high correlation with human judgement.
+- [Fréchet Inception Distance (FID)](https://arxiv.org/abs/1706.08500): FID aims to measure how similar are two datasets of images. It is calculated by computing the Fréchet distance between two Gaussians fitted to feature representations of the Inception network
+- [CLIP directional similarity](https://arxiv.org/abs/2108.00946): It measures the consistency of the change between the two images (in CLIP space) with the change between the two image captions.
+
+More image quality metrics and calculation tools can be found [here](https://github.com/chaofengc/IQA-PyTorch/blob/main/docs/ModelCard.md).
+
+### Efficient Generation
+Diffusion models require multiple forward steps over to generate data, which is expensive. Here are some representative papers of diffusion models for efficient generation:
+
+- [Gotta Go Fast When Generating Data with Score-Based Models](https://arxiv.org/abs/2105.14080)
+- [Fast Sampling of Diffusion Models with Exponential Integrator](https://arxiv.org/abs/2204.13902)
+- [Learning fast samplers for diffusion models by differentiating through sample quality](https://openreview.net/forum?id=VFBjuF8HEp)
+- [Accelerating Diffusion Models via Early Stop of the Diffusion Process](https://arxiv.org/abs/2205.12524)
+
+More papers can be found [here](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy/tree/main?tab=readme-ov-file#1-efficient-sampling).
+
+### Knowledge Editing
+Here are some representative papers of knowledge editing for diffusion models:
+- [Erasing Concepts from Diffusion Models (ICCV 2023)](https://openaccess.thecvf.com/content/ICCV2023/html/Gandikota_Erasing_Concepts_from_Diffusion_Models_ICCV_2023_paper.html)
+- [Editing Massive Concepts in Text-to-Image Diffusion Models](https://arxiv.org/abs/2403.13807)
+- [Forget-Me-Not: Learning to Forget in Text-to-Image Diffusion Models](https://arxiv.org/abs/2303.17591)
+
+More papers can be found [here](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#remove-concept).
+
+### Open Challenges
+Here are some survey papers talking about the challenges faced by diffusion models.
+- [A Survey of Diffusion Based Image Generation Models](https://arxiv.org/pdf/2308.13142)
+- [A Survey on Video Diffusion Models](https://arxiv.org/pdf/2310.10647)
+- [State of the Art on Diffusion Models for Visual Computing](https://arxiv.org/abs/2310.07204)
+- [Diffusion Models in NLP: A Survey](https://arxiv.org/abs/2303.07576)
+
+## Large Multimodal Models (LMMs)
+Typical LMMs are constructed by connecting and fine-tuning existing pretrained unimodal models. Some are also pretrained from scratch. Check how LMMs evolve in the image below [[image source]](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models).
+
+![Diffusion Model Taxonomy](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/raw/main/images/timeline.jpg)
+
+### Model Architectures
+There are many different ways of contructing LMMs. Representative architectures include:
+- [Language Models are General-Purpose Interfaces](https://arxiv.org/pdf/2206.06336.pdf)
+- [Flamingo: A Visual Language Model for Few-Shot Learning (NeurIPS 2022)](https://arxiv.org/abs/2204.14198)
+- [BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation (ICML 2022)](https://arxiv.org/abs/2201.12086)
+- [BLIP-2: bootstrapping language-image pre-training with frozen image encoders and large language models (ICML 2023)](https://arxiv.org/pdf/2301.12597.pdf)
+- [mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration](https://arxiv.org/abs/2311.04257)
+- [Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks](https://arxiv.org/pdf/2311.06242)
+
+More papers can be found via [Link 1](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models?tab=readme-ov-file#foundation-models) and [Link 2](https://github.com/junkunyuan/Awesome-Large-Multimodal-Models?tab=readme-ov-file#foundation-models).
+
+### Towards Embodied Agents
+By combining LMMs with robots, researchers aim to develop AI systems that can perceive, reason about, and act upon the world in a more natural and intuitive way, with potential applications spanning robotics, virtual assistants, autonomous vehicles, and beyond. Here are some representative work of realizing embodied AI with LMMs:
+
+- [RT-1: Robotics Transformer for Real-World Control at Scale](https://arxiv.org/pdf/2212.06817)
+- [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](https://arxiv.org/pdf/2307.15818)
+- [RT-H: Action Hierarchies Using Language](https://arxiv.org/pdf/2403.01823)
+- [PaLM-E: An Embodied Multimodal Language Model](https://arxiv.org/pdf/2303.03378)
+
+More papers can be found via [Link 1](https://github.com/ChanganVR/awesome-embodied-vision) and [Link 2](https://github.com/haoranD/Awesome-Embodied-AI).
+
+Here are some popular simulators and datasets to evaluate LMMs performance for embodied AI:
+- [Habitat 3.0: An Embodied AI simulation platform for studying collaborative human-robot interaction tasks in home environments](https://aihabitat.org/habitat3/)
+- [ProcTHOR-10K: 10K Interactive Household Environments for Embodied AI](https://procthor.allenai.org/)
+- [ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes](https://arnold-benchmark.github.io/)
+
+More resources can be found [here](https://github.com/ChanganVR/awesome-embodied-vision?tab=readme-ov-file#-simulators).
+
+### Open Challenges
+Here are some survey papers talking about open challenges for LMM-enabled embodied AI:
+- [The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/pdf/2309.07864)
+- [Vision-Language Navigation with Embodied Intelligence: A Survey](https://arxiv.org/abs/2402.14304)
+- [A Survey of Embodied AI: From Simulators to Research Tasks](https://arxiv.org/pdf/2103.04918.pdf)
+- [A Survey on LLM-based Autonomous Agents](https://github.com/Paitesanshi/LLM-Agent-Survey)
+- [Mindstorms in Natural Language-Based Societies of Mind](https://arxiv.org/pdf/2305.17066.pdf)
+
+## Beyond Transformers
+Researchers are trying to explore new models other than transformers. The efforts include implicit structuring model parameters and defining new model architectures.
+
+### Implictly Structured Parameters
+
+- [Monarch Mixer: Revisiting BERT, Without Attention or MLPs](https://arxiv.org/pdf/2310.12109)
+- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/pdf/2312.00752)
+
+### New Model Architectures
+
+  - [Hyena Hierarchy: Towards Larger Convolutional Language Models](https://arxiv.org/pdf/2302.10866)
+  - [RWKV: Reinventing RNNs for the Transformer Era](https://arxiv.org/pdf/2305.13048)
+  - [Retentive Network: A Successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621)
+  - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/pdf/2312.00752)
+
+Here is an awesome tutorial for [state space models](https://srush.github.io/annotated-s4/).
 
 
 
