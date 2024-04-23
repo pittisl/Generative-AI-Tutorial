@@ -3,12 +3,11 @@
 
 Generative AI is a hot topic today :fire: and this roadmap is designed to help beginners quickly gain basic knowledge and find useful resources of Generative AI. Even experts are welcome to refer to this roadmap to recall old knowledge and develop new ideas.
 
-## Contents
+## Table of Content
 - [Background Knowledge](#background-knowledge)
   - [Neural Networks Inference and Training](#neural-networks-inference-and-training)
   - [Transformer Architecture](#transformer-architecture)
   - [Common Transformer-based Models](#common-transformer-based-models)
-
 - [Large Language Models (LLMs)](#large-language-models-llms)
   - [Pretraining and Fine-tuning](#pretraining-and-finetuning)
   - [Prompting](#prompting)
@@ -18,7 +17,6 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Efficient Generation](#efficient-generation)
   - [Knowledge Editing](#knowledge-editing)
   - [Open Challenges](#open-challenges)
-
 - [Diffusion Models](#diffusion-models)
   - [Image Generation](#image-generation)
   - [Video Generation](#video-generation)
@@ -28,15 +26,14 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Efficient Generation](#efficient-generation-1)
   - [Knowledge Editing](#knowledge-editing-1)
   - [Open Challenges](#open-challenges-1)
-
 - [Large Multimodal Models (LMMs)](#large-multimodal-models-lmms)
   - [Model Architectures](#model-architectures)
   - [Towards Embodied Agents](#towards-embodied-agents)
   - [Open Challenges](#open-challenges-2)
-
 - [Beyond Transformers](#beyond-transformers)
   - [Implicitly Structured Parameters](#implictly-structured-parameters)
   - [New Model Architectures](#new-model-architectures)
+
 
 ## Background Knowledge
 This section should help you learn or regain the basic knowledge of neural networks (e.g., backpropagation), get you familiar with the transformer architecture, and describe some common transformer-based models.
