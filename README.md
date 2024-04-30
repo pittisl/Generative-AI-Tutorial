@@ -1,4 +1,4 @@
-<h1><img align="center" height="36" src="genairoadmap_logo.jpg"> Generative AI Roadmap</h1>
+<h1><img align="center" height="40" src="genairoadmap_logo.jpg"> Generative AI Roadmap</h1>
 
 > A subjective learning guide for generative AI research including curated list of articles and projects
 
