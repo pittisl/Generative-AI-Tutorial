@@ -202,7 +202,7 @@ More papers can be found [here](https://github.com/zjunlp/KnowledgeEditingPapers
 
 
 ### LLM-powered Agents
-By receiving massive training, LLMs digest world knowledge and are able to follow input instructions precisely. With these amazing capabilities, LLMs can play as agents that are possible to autonomously (and collaboratively) solve complex tasks, or simulate human interactions. Here are some representative work of LLM agents:
+By receiving massive training, LLMs digest world knowledge and are able to follow input instructions precisely. With these amazing capabilities, LLMs can play as agents that are possible to autonomously (and collaboratively) solve complex tasks, or simulate human interactions. Here are some representative papers of LLM agents:
 
 * [Generative Agents: Interactive Simulacra of Human Behavior (UIST 2023)](https://arxiv.org/pdf/2304.03442) [LLMs simulate human society in video games]
 * [SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents (ICLR 2024)](https://arxiv.org/abs/2310.11667) [LLMs simulate social interactions]
