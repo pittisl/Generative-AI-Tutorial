@@ -1,4 +1,5 @@
-# Generative AI Roadmap
+<h1><img align="center" height="36" src="genairoadmap_logo.jpg"> Generative AI Roadmap</h1>
+
 > A subjective learning guide for generative AI research including curated list of articles and projects
 
 Generative AI is a hot topic today :fire: and this roadmap is designed to help beginners quickly gain basic knowledge and find useful resources of Generative AI. Even experts are welcome to refer to this roadmap to recall old knowledge and develop new ideas.
