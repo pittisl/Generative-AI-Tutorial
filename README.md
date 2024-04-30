@@ -16,6 +16,7 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Efficient Fine-tuning](#efficient-finetuning)
   - [Efficient Generation](#efficient-generation)
   - [Knowledge Editing](#knowledge-editing)
+  - [LLM-powered Agents](#llm-powered-agents)
   - [Open Challenges](#open-challenges)
 - [Diffusion Models](#diffusion-models)
   - [Image Generation](#image-generation)
@@ -50,7 +51,7 @@ Are you very familiar with the following classic neural network structures?
 - Why do RNNs work better than MLPs on time-series data?
 - What's the difference between GRU and LSTM?
 
-Backpropagation (BP) is the base of NN training. --You will not be an AI expert if you don't understand BP--. There are many textbooks and online tutorials teaching BP, but unfortunately, most of them don't present formulas in vectorized/tensorized forms. The BP formula of an NN layer is indeed as neat as its forward pass formula. This is exactly how BP is implemented and should be implemented. To understand BP, please read the following materials:
+Backpropagation (BP) is the base of NN training. **You will not be an AI expert if you don't understand BP**. There are many textbooks and online tutorials teaching BP, but unfortunately, most of them don't present formulas in vectorized/tensorized forms. The BP formula of an NN layer is indeed as neat as its forward pass formula. This is exactly how BP is implemented and should be implemented. To understand BP, please read the following materials:
 
 - [Neural Networks and Deep Learning](http://ndl.ethernet.edu.et/bitstream/123456789/88552/1/2018_Book_NeuralNetworksAndDeepLearning.pdf) [Chapter 3.2 especially 3.2.6]
 - [meProp: Sparsified Back Propagation for Accelerated Deep Learning with Reduced Overfitting (ICML 2017)](https://arxiv.org/pdf/1706.06197.pdf) [Section 2.1]
@@ -189,7 +190,7 @@ Accelerating decoding of LLMs is crucial for improving inference speed and effic
 More work about accelerating LLM decoding can be found via [Link 1](https://github.com/horseee/Awesome-Efficient-LLM?tab=readme-ov-file#inference-acceleration) and [Link 2](https://github.com/DefTruth/Awesome-LLM-Inference).
 
 ### Knowledge Editing
-Knowledge editing aims to efficiently modify LLMs behaviors, such as reducing bias and revising learned correlations. It includes many topics such knowledge localization and unlearning. Representative work includes:
+Knowledge editing aims to efficiently modify LLMs behaviors, such as reducing bias and revising learned correlations. It includes many topics such as knowledge localization and unlearning. Representative work includes:
 - [Memory-Based Model Editing at Scale (ICML 2022)](https://arxiv.org/abs/2206.06520)
 - [Transformer-Patcher: One Mistake worth One Neuron (ICLR 2023)](https://arxiv.org/abs/2301.09785)
 - [Massive Editing for Large Language Model via Meta Learning (ICLR 2024)](https://arxiv.org/pdf/2311.04661.pdf)
@@ -199,6 +200,20 @@ Knowledge editing aims to efficiently modify LLMs behaviors, such as reducing bi
 
 More papers can be found [here](https://github.com/zjunlp/KnowledgeEditingPapers).
 
+
+### LLM-powered Agents
+By receiving massive training, LLMs digest world knowledge and are able to follow input instructions precisely. With these amazing capabilities, LLMs can play as agents that are possible to autonomously (and collaboratively) solve complex tasks, or simulate human interactions. Here are some representative work of LLM agents:
+
+* [Generative Agents: Interactive Simulacra of Human Behavior (UIST 2023)](https://arxiv.org/pdf/2304.03442) [LLMs simulate human society in video games]
+* [SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents (ICLR 2024)](https://arxiv.org/abs/2310.11667) [LLMs simulate social interactions]
+* [Voyager: An Open-Ended Embodied Agent with Large Language Models](https://arxiv.org/pdf/2305.16291) [LLMs live in the Minecraft world]
+* [Large Language Models as Tool Makers (ICLR 2024)](https://arxiv.org/abs/2305.17126) [LLMs create their own reusable tools (e.g., in python functions) for problem-solving]
+* [MetaGPT: Meta Programming for Multi-Agent Collaborative Framework](https://arxiv.org/pdf/2308.00352) [LLMs as a team for automated software development]
+* [WebArena: A Realistic Web Environment for Building Autonomous Agents (ICLR 2024)](https://arxiv.org/abs/2307.13854) [LLMs use web applications]
+* [Mobile-Env: An Evaluation Platform and Benchmark for LLM-GUI Interaction](https://arxiv.org/pdf/2305.08144) [LLMs use mobile applications]
+* [HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face (NeurIPS 2023)](https://arxiv.org/pdf/2303.17580) [LLMs seek models in huggingface for problem-solving]
+
+A complete list of papers, platforms, and evaluation tools can be found [here](https://github.com/hyp1231/awesome-llm-powered-agent?tab=readme-ov-file#general-reasoning--planning--tool-using).
 
 ### Open Challenges
 LLMs face several open challenges that researchers and developers are actively working to address. These challenges include:
@@ -222,7 +237,7 @@ LLMs face several open challenges that researchers and developers are actively w
 A complete list can be found [here](https://github.com/HqWu-HITCS/Awesome-LLM-Survey?tab=readme-ov-file#challenge-of-llm).
 
 ## Diffusion Models
-Diffusion models aim to approxmiate the probability distribution of a given data domain, and provide a way to generate samples from its approxmated distribution. Their goals are similar to other popular generative models, such as [VAE](https://arxiv.org/pdf/1606.05908), [GANs](https://arxiv.org/pdf/1406.2661), and [Normalizing Flows](https://arxiv.org/pdf/1908.09257).
+Diffusion models aim to approxmiate the probability distribution of a given data domain, and provide a way to generate samples from its approximated distribution. Their goals are similar to other popular generative models, such as [VAE](https://arxiv.org/pdf/1606.05908), [GANs](https://arxiv.org/pdf/1406.2661), and [Normalizing Flows](https://arxiv.org/pdf/1908.09257).
 
 The working flow of diffusion models is featured with two process:
 1. **Forward process (diffusion process):** it progressively applies noise to the original input data step by step until the data completely becomes noise.
@@ -349,7 +364,7 @@ Here are some survey papers talking about open challenges for LMM-enabled embodi
 - [Mindstorms in Natural Language-Based Societies of Mind](https://arxiv.org/pdf/2305.17066.pdf)
 
 ## Beyond Transformers
-Researchers are trying to explore new models other than transformers. The efforts include implicit structuring model parameters and defining new model architectures.
+Researchers are trying to explore new models other than transformers. The efforts include implicitly structuring model parameters and defining new model architectures.
 
 ### Implictly Structured Parameters
 
