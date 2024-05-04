@@ -187,6 +187,8 @@ Accelerating decoding of LLMs is crucial for improving inference speed and effic
 - [Efficient Streaming Language Models with Attention Sinks](https://arxiv.org/abs/2309.17453)
 - [SpecInfer: Accelerating Generative LLM Serving with Speculative Inference and Token Tree Verification](https://arxiv.org/abs/2305.09781)
 - [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](https://arxiv.org/abs/2401.10774)
+- [Better & Faster Large Language Models via Multi-token Prediction](https://arxiv.org/pdf/2404.19737)
+- [Layer Skip: Enabling Early Exit Inference and Self-Speculative Decoding](https://arxiv.org/pdf/2404.16710)
 
 More work about accelerating LLM decoding can be found via [Link 1](https://github.com/horseee/Awesome-Efficient-LLM?tab=readme-ov-file#inference-acceleration) and [Link 2](https://github.com/DefTruth/Awesome-LLM-Inference).
 
@@ -353,6 +355,7 @@ Here are some popular simulators and datasets to evaluate LMMs performance for e
 - [Habitat 3.0: An Embodied AI simulation platform for studying collaborative human-robot interaction tasks in home environments](https://aihabitat.org/habitat3/)
 - [ProcTHOR-10K: 10K Interactive Household Environments for Embodied AI](https://procthor.allenai.org/)
 - [ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes](https://arnold-benchmark.github.io/)
+- [LEGENT: Open Platform for Embodied Agents](https://arxiv.org/pdf/2404.18243)
 
 More resources can be found [here](https://github.com/ChanganVR/awesome-embodied-vision?tab=readme-ov-file#-simulators).
 
@@ -378,6 +381,7 @@ Researchers are trying to explore new models other than transformers. The effort
   - [RWKV: Reinventing RNNs for the Transformer Era](https://arxiv.org/pdf/2305.13048)
   - [Retentive Network: A Successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621)
   - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/pdf/2312.00752)
+  - [KAN:Kolmogorov–Arnold Networks](https://arxiv.org/pdf/2404.19756)
 
 Here is an awesome tutorial for [state space models](https://srush.github.io/annotated-s4/).
 
