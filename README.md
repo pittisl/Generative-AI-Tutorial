@@ -176,6 +176,7 @@ Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of la
   - Prefix Tuning: [Prefix-tuning: Optimizing continuous prompts for generation](https://arxiv.org/pdf/2101.00190.pdf%EF%BC%89)
   - LoRA: [Lora: Low-rank adaptation of large language models](https://arxiv.org/pdf/2106.09685)
   - [Towards a Unified View of Parameter-Efficient Transfer Learning](https://arxiv.org/pdf/2110.04366)
+  - [LoRA Learns Less and Forgets Less](https://arxiv.org/pdf/2405.09673)
 
 More work can be found in [Huggingface PEFT paper collection](https://huggingface.co/collections/PEFT/peft-papers-6573a1a95da75f987fb873ad) and it's highly recommended to practice with [HuggingFace PEFT API](https://github.com/huggingface/peft).
 
@@ -348,6 +349,7 @@ By combining LMMs with robots, researchers aim to develop AI systems that can pe
 - [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](https://arxiv.org/pdf/2307.15818)
 - [RT-H: Action Hierarchies Using Language](https://arxiv.org/pdf/2403.01823)
 - [PaLM-E: An Embodied Multimodal Language Model](https://arxiv.org/pdf/2303.03378)
+- [TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction](https://arxiv.org/pdf/2405.10315)
 
 More papers can be found via [Link 1](https://github.com/ChanganVR/awesome-embodied-vision) and [Link 2](https://github.com/haoranD/Awesome-Embodied-AI).
 
