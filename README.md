@@ -181,6 +181,18 @@ Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of la
 
 More work can be found in [Huggingface PEFT paper collection](https://huggingface.co/collections/PEFT/peft-papers-6573a1a95da75f987fb873ad) and it's highly recommended to practice with [HuggingFace PEFT API](https://github.com/huggingface/peft).
 
+### Model Merging
+Model merging refers to merging two or more LLMs trained on different tasks into a single LLM. This technique aims to leverage the strengths and knowledge of different models to create a more robust and capable model. For example, a LLM for code generation and another LLM for math prolem solving can be merged together so that the merged model is capable of doing both code generation and math problem solving.
+
+The model merging is intriguing because it can be effectively achieved with very simple and cheap algorithms (e.g., linear combination of model weights). Here are some representative papers and reading materials:
+
+[Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](https://arxiv.org/abs/2203.05482)
+[Editing Models with Task Arithmetic](https://arxiv.org/abs/2212.04089)
+[Merge Large Language Models with mergekit](https://huggingface.co/blog/mlabonne/merge-models)
+
+More papers about model merging can be found [here](https://huggingface.co/collections/osanseviero/model-merging-65097893623330a3a51ead66)
+
+
 ### Efficient Generation
 Accelerating decoding of LLMs is crucial for improving inference speed and efficiency, especially in real-time or latency-sensitive applications. Here are some representative work of speeding up decoding process of LLMs:
 
