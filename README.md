@@ -15,6 +15,7 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Evaluation](#evaluation)
   - [Dealing with Long Context](#dealing-with-long-context)
   - [Efficient Fine-tuning](#efficient-finetuning)
+  - [Model Merging](#model-merging)
   - [Efficient Generation](#efficient-generation)
   - [Knowledge Editing](#knowledge-editing)
   - [LLM-powered Agents](#llm-powered-agents)
