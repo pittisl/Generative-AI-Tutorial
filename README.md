@@ -19,6 +19,7 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Efficient Generation](#efficient-generation)
   - [Knowledge Editing](#knowledge-editing)
   - [LLM-powered Agents](#llm-powered-agents)
+  - [Findings](#findings)
   - [Open Challenges](#open-challenges)
 - [Diffusion Models](#diffusion-models)
   - [Image Generation](#image-generation)
@@ -233,6 +234,10 @@ By receiving massive training, LLMs digest world knowledge and are able to follo
 
 A complete list of papers, platforms, and evaluation tools can be found [here](https://github.com/hyp1231/awesome-llm-powered-agent?tab=readme-ov-file#general-reasoning--planning--tool-using).
 
+### Findings
+
+- [Your Transformer is Secretly Linear](https://arxiv.org/pdf/2405.12250)
+
 ### Open Challenges
 LLMs face several open challenges that researchers and developers are actively working to address. These challenges include:
 - Hallucination
@@ -400,6 +405,8 @@ Researchers are trying to explore new models other than transformers. The effort
   - [KAN:Kolmogorov–Arnold Networks](https://arxiv.org/pdf/2404.19756)
 
 Here is an awesome tutorial for [state space models](https://srush.github.io/annotated-s4/).
+
+
 
 
 
