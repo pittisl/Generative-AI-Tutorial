@@ -237,6 +237,7 @@ A complete list of papers, platforms, and evaluation tools can be found [here](h
 ### Findings
 
 - [Your Transformer is Secretly Linear](https://arxiv.org/pdf/2405.12250)
+- [Not All Language Model Features Are Linear](https://arxiv.org/abs/2405.14860)
 
 ### Open Challenges
 LLMs face several open challenges that researchers and developers are actively working to address. These challenges include:
@@ -358,6 +359,7 @@ There are many different ways of contructing LMMs. Representative architectures 
 - [BLIP-2: bootstrapping language-image pre-training with frozen image encoders and large language models (ICML 2023)](https://arxiv.org/pdf/2301.12597.pdf)
 - [mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration](https://arxiv.org/abs/2311.04257)
 - [Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks](https://arxiv.org/pdf/2311.06242)
+- [Dense Connector for MLLMs](https://arxiv.org/abs/2405.13800)
 
 More papers can be found via [Link 1](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models?tab=readme-ov-file#foundation-models) and [Link 2](https://github.com/junkunyuan/Awesome-Large-Multimodal-Models?tab=readme-ov-file#foundation-models).
 
