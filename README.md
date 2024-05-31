@@ -72,6 +72,7 @@ Transformer is the base architecture of existing large generative models. It's n
 - [Neural machine translation with a Transformer and Keras](https://www.tensorflow.org/text/tutorials/transformer) [Great Explanation for Multihead Attention]
 - [Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/pdf/2104.09864.pdf) [Understand Positional Embedding]
 - [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) [Understand Positional Embedding]
+- [Contextual Position Encoding: Learning to Count What’s Important](https://arxiv.org/pdf/2405.18719) [Context-dependent positional encoding]
 - [Teacher Forcing vs Scheduled Sampling vs Normal Mode](https://rentruewang.github.io/learning-machine/layers/transformer/training/teacher/teacher.html) [Teacher Forcing in Transformer Training]
 - [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](https://arxiv.org/pdf/2303.06865)[See section 3 - generative inference to learn how LLMs peform generation based on KV cache]
 
