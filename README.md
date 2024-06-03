@@ -9,6 +9,7 @@ Generative AI is a hot topic today :fire: and this roadmap is designed to help b
   - [Neural Networks Inference and Training](#neural-networks-inference-and-training)
   - [Transformer Architecture](#transformer-architecture)
   - [Common Transformer-based Models](#common-transformer-based-models)
+  - [Miscellaneous](#miscellaneous)
 - [Large Language Models (LLMs)](#large-language-models-llms)
   - [Pretraining and Fine-tuning](#pretraining-and-finetuning)
   - [Prompting](#prompting)
@@ -89,8 +90,12 @@ Transformer is the base architecture of existing large generative models. It's n
 - [Scaling Vision with Sparse Mixture of Experts (NeurIPS 2021)](https://arxiv.org/pdf/2106.05974.pdf) [MoE]
 - [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](https://arxiv.org/pdf/2404.02258) [MoD]
 
+### Miscellaneous
+
+[Einsum is easy and useful](https://ejenner.com/post/einsum/) [A great tutorial for using einsum/einops]
+
 ## Large Language Models (LLMs)
-LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Check [milstone papers](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#milestone-papers) of LLMs.
+LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Check [milestone papers](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#milestone-papers) of LLMs.
 
 ![LLM Evolutionary Tree](https://github.com/Mooler0410/LLMsPracticalGuide/raw/main/imgs/tree.jpg)
 
@@ -189,9 +194,9 @@ Model merging refers to merging two or more LLMs trained on different tasks into
 
 The model merging is intriguing because it can be effectively achieved with very simple and cheap algorithms (e.g., linear combination of model weights). Here are some representative papers and reading materials:
 
-[Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](https://arxiv.org/abs/2203.05482)
-[Editing Models with Task Arithmetic](https://arxiv.org/abs/2212.04089)
-[Merge Large Language Models with mergekit](https://huggingface.co/blog/mlabonne/merge-models)
+* [Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](https://arxiv.org/abs/2203.05482)
+* [Editing Models with Task Arithmetic](https://arxiv.org/abs/2212.04089)
+* [Merge Large Language Models with mergekit](https://huggingface.co/blog/mlabonne/merge-models)
 
 More papers about model merging can be found [here](https://huggingface.co/collections/osanseviero/model-merging-65097893623330a3a51ead66)
 
@@ -406,6 +411,7 @@ Researchers are trying to explore new models other than transformers. The effort
   - [Retentive Network: A Successor to Transformer for Large Language Models](https://arxiv.org/pdf/2307.08621)
   - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/pdf/2312.00752)
   - [KAN:Kolmogorov–Arnold Networks](https://arxiv.org/pdf/2404.19756)
+  - [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](https://arxiv.org/pdf/2405.21060)
 
 Here is an awesome tutorial for [state space models](https://srush.github.io/annotated-s4/).
 
