@@ -92,7 +92,8 @@ Transformer is the base architecture of existing large generative models. It's n
 
 ### Miscellaneous
 
-[Einsum is easy and useful](https://ejenner.com/post/einsum/) [A great tutorial for using einsum/einops]
+* [Einsum is easy and useful](https://ejenner.com/post/einsum/) [A great tutorial for using einsum/einops]
+* [Open-Endedness is Essential for Artificial Superhuman Intelligence (ICML 2024)](https://arxiv.org/pdf/2406.04268) [Thoughts on achieving superhuman AI]
 
 ## Large Language Models (LLMs)
 LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Check [milestone papers](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#milestone-papers) of LLMs.
@@ -237,6 +238,8 @@ By receiving massive training, LLMs digest world knowledge and are able to follo
 * [WebArena: A Realistic Web Environment for Building Autonomous Agents (ICLR 2024)](https://arxiv.org/abs/2307.13854) [LLMs use web applications]
 * [Mobile-Env: An Evaluation Platform and Benchmark for LLM-GUI Interaction](https://arxiv.org/pdf/2305.08144) [LLMs use mobile applications]
 * [HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face (NeurIPS 2023)](https://arxiv.org/pdf/2303.17580) [LLMs seek models in huggingface for problem-solving]
+* [AGENTGYM: Evolving Large Language Model-based
+Agents across Diverse Environments](https://arxiv.org/pdf/2406.04151) [Diverse interactive environments and tasks for LLM-based agents]
 
 A complete list of papers, platforms, and evaluation tools can be found [here](https://github.com/hyp1231/awesome-llm-powered-agent?tab=readme-ov-file#general-reasoning--planning--tool-using).
 
@@ -385,6 +388,7 @@ Here are some popular simulators and datasets to evaluate LMMs performance for e
 - [ProcTHOR-10K: 10K Interactive Household Environments for Embodied AI](https://procthor.allenai.org/)
 - [ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes](https://arnold-benchmark.github.io/)
 - [LEGENT: Open Platform for Embodied Agents](https://arxiv.org/pdf/2404.18243)
+- [RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots](https://arxiv.org/pdf/2406.02523)
 
 More resources can be found [here](https://github.com/ChanganVR/awesome-embodied-vision?tab=readme-ov-file#-simulators).
 
