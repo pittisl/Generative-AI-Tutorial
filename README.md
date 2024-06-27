@@ -70,10 +70,10 @@ Backpropagation (BP) is the base of NN training. **You will not be an AI expert 
 Transformer is the base architecture of existing large generative models. It's necessary to understand every component in the transformer. Please read the following materials:
 - [Attention Is All You Need (NeurIPS 2017)](https://arxiv.org/pdf/1706.03762.pdf) [Original Paper]
 - [An image is worth 16x16 words: Transformers for image recognition at scale (ICLR 2021)](https://arxiv.org/pdf/2010.11929.pdf) [Vision Transformer]
-- [Neural machine translation with a Transformer and Keras](https://www.tensorflow.org/text/tutorials/transformer) [Great Explanation for Multihead Attention]
+- [Neural machine translation with a Transformer and Keras](https://www.tensorflow.org/text/tutorials/transformer) [Great Explanation for MultiHead Attention (MHA)]
 - [FLOPs of a Transformer Block](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Pan_Scalable_Vision_Transformers_ICCV_2021_supplemental.pdf) [Let's practice calculating FLOPs]
-- [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/pdf/1911.02150v1.pdf) [Multi-Query Attention]
-- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](https://arxiv.org/pdf/2305.13245v3) [Grouped-Query Attention]
+- [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/pdf/1911.02150v1.pdf) [Multi-Query Attention (MQA)]
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](https://arxiv.org/pdf/2305.13245v3) [Grouped-Query Attention (GQA)]
 - [Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/pdf/2104.09864.pdf) [Understand Positional Embedding]
 - [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) [Understand Positional Embedding]
 - [Teacher Forcing vs Scheduled Sampling vs Normal Mode](https://rentruewang.github.io/learning-machine/layers/transformer/training/teacher/teacher.html) [Teacher Forcing in Transformer Training]
@@ -82,8 +82,9 @@ Transformer is the base architecture of existing large generative models. It's n
 
 
 :pencil: If you understand transformers, you should be able to answer these questions:
-- What are the pros and cons of tranformers compared to RNNs (simultaneously attending, training parallelism, complexity)?
-- Can you caculate the FLOPs of Grouped-Query Attention? When does it degrade MultiHead Attention and Multi-Query Attention?
+- What are the pros and cons of tranformers compared to RNNs？(simultaneously attending, training parallelism, complexity)
+- Can you caculate the FLOPs of GQA? See when does it degrade to MHA and MQA?
+- What is the motivation of MQA and GQA?
 - What does the causal attention mask look like and why?
 - How will you describe the training of decoder-only transformers step by step?
 - Why is RoPE better than sinusoidal positional encoding?
