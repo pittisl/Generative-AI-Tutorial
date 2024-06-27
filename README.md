@@ -71,17 +71,22 @@ Transformer is the base architecture of existing large generative models. It's n
 - [Attention Is All You Need (NeurIPS 2017)](https://arxiv.org/pdf/1706.03762.pdf) [Original Paper]
 - [An image is worth 16x16 words: Transformers for image recognition at scale (ICLR 2021)](https://arxiv.org/pdf/2010.11929.pdf) [Vision Transformer]
 - [Neural machine translation with a Transformer and Keras](https://www.tensorflow.org/text/tutorials/transformer) [Great Explanation for Multihead Attention]
+- [FLOPs of a Transformer Block](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Pan_Scalable_Vision_Transformers_ICCV_2021_supplemental.pdf) [Let's practice calculating FLOPs]
+- [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/pdf/1911.02150v1.pdf) [Multi-Query Attention]
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](https://arxiv.org/pdf/2305.13245v3) [Grouped-Query Attention]
 - [Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/pdf/2104.09864.pdf) [Understand Positional Embedding]
 - [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) [Understand Positional Embedding]
-- [Contextual Position Encoding: Learning to Count What’s Important](https://arxiv.org/pdf/2405.18719) [Context-dependent positional encoding]
 - [Teacher Forcing vs Scheduled Sampling vs Normal Mode](https://rentruewang.github.io/learning-machine/layers/transformer/training/teacher/teacher.html) [Teacher Forcing in Transformer Training]
-- [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](https://arxiv.org/pdf/2303.06865)[See section 3 - generative inference to learn how LLMs peform generation based on KV cache]
+- [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](https://arxiv.org/pdf/2303.06865) [See section 3 - generative inference to learn how LLMs peform generation based on KV cache]
+- [Contextual Position Encoding: Learning to Count What’s Important](https://arxiv.org/pdf/2405.18719) [Context-dependent positional encoding]
+
 
 :pencil: If you understand transformers, you should be able to answer these questions:
-- What are the pros and cons of tranformers compared to RNNs?
-- How does the causal attention mask look like and why?
+- What are the pros and cons of tranformers compared to RNNs (simultaneously attending, training parallelism, complexity)?
+- Can you caculate the FLOPs of Grouped-Query Attention? When does it degrade MultiHead Attention and Multi-Query Attention?
+- What does the causal attention mask look like and why?
 - How will you describe the training of decoder-only transformers step by step?
-- Why is RoPE better than sinusoidal positional encoding in the original transformer paper?
+- Why is RoPE better than sinusoidal positional encoding?
 
 ### Common Transformer-based Models
 - [Learning transferable visual models from natural language supervision](http://proceedings.mlr.press/v139/radford21a/radford21a.pdf) [CLIP]
