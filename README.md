@@ -101,6 +101,8 @@ Transformer is the base architecture of existing large generative models. It's n
 * [Einsum is easy and useful](https://ejenner.com/post/einsum/) [A great tutorial for using einsum/einops]
 * [Open-Endedness is Essential for Artificial Superhuman Intelligence (ICML 2024)](https://arxiv.org/pdf/2406.04268) [Thoughts on achieving superhuman AI]
 
+* [Levels of AGI for Operationalizing Progress on the Path to AGI](https://proceedings.mlr.press/v235/morris24b.html)
+
 ## Large Language Models (LLMs)
 LLMs are transformers. They can be categorized into encoder-only, encoder-decoder, and decoder-only architectures, as shown in the LLM evolutionary tree below [[image source]](https://github.com/Mooler0410/LLMsPracticalGuide/blob/main/imgs/tree.jpg). Check [milestone papers](https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#milestone-papers) of LLMs.
 
@@ -253,6 +255,7 @@ A complete list of papers, platforms, and evaluation tools can be found [here](h
 
 - [Your Transformer is Secretly Linear](https://arxiv.org/pdf/2405.12250)
 - [Not All Language Model Features Are Linear](https://arxiv.org/abs/2405.14860)
+- [KAN or MLP: A Fairer Comparison](https://arxiv.org/pdf/2407.16674)
 
 ### Open Challenges
 LLMs face several open challenges that researchers and developers are actively working to address. These challenges include:
