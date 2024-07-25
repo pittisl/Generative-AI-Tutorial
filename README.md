@@ -256,6 +256,8 @@ A complete list of papers, platforms, and evaluation tools can be found [here](h
 - [Your Transformer is Secretly Linear](https://arxiv.org/pdf/2405.12250)
 - [Not All Language Model Features Are Linear](https://arxiv.org/abs/2405.14860)
 - [KAN or MLP: A Fairer Comparison](https://arxiv.org/pdf/2407.16674)
+- [Transformer Layers as Painters](https://arxiv.org/pdf/2407.09298)
+- [Vision language models are blind](https://arxiv.org/pdf/2407.06581)
 
 ### Open Challenges
 LLMs face several open challenges that researchers and developers are actively working to address. These challenges include:
