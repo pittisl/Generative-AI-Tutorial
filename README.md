@@ -69,6 +69,7 @@ Backpropagation (BP) is the base of NN training. **You will not be an AI expert 
 ### Transformer Architecture
 Transformer is the base architecture of existing large generative models. It's necessary to understand every component in the transformer. Please read the following materials:
 - [Attention Is All You Need (NeurIPS 2017)](https://arxiv.org/pdf/1706.03762.pdf) [Original Paper]
+- [Transformer Explainer: Interactive Learning of Text-Generative Models](https://poloclub.github.io/transformer-explainer/) [An Interactive Tutorial]
 - [An image is worth 16x16 words: Transformers for image recognition at scale (ICLR 2021)](https://arxiv.org/pdf/2010.11929.pdf) [Vision Transformer]
 - [Neural machine translation with a Transformer and Keras](https://www.tensorflow.org/text/tutorials/transformer) [Great Explanation for MultiHead Attention (MHA)]
 - [FLOPs of a Transformer Block](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Pan_Scalable_Vision_Transformers_ICCV_2021_supplemental.pdf) [Let's practice calculating FLOPs]
